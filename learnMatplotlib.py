@@ -5,10 +5,6 @@ Created on Mar 30, 2016
 '''
 
 import numpy as np
-
-import warnings;
-with warnings.catch_warnings():
-    warnings.simplefilter("ignore"); 
 import matplotlib.pyplot as plt
 
 class MyClass(object):
