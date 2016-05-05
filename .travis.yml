@@ -16,5 +16,5 @@ notifications: # set notification options
       - henry621603@gmail.com
 
     # change is when the repo status goes from pass to fail or vice versa
-#    on_success: [always|never|change]
-#    on_failure: [always|never|change]
+    on_success: [always|never|change] # default: change
+    on_failure: [always|never|change] # default: always
