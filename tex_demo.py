@@ -12,6 +12,8 @@ time, the run may be silent, as a lot of the information is cached in
 
 """
 import numpy as np
+import matplotlib
+matplotlib.use('pdf')
 import matplotlib.pyplot as plt
 
 
