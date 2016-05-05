@@ -6,8 +6,8 @@ cache:
     - pip
 before_install:
     - pip install pytest pytest-cov
-# command to run tests
-script: nosetests
+script:
+    - pytest learnMatplotlib.py
 
 notifications: # set notification options
   email:
