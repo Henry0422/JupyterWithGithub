@@ -12,7 +12,7 @@ branches:
 
 # Adopt code from:  https://ryanvarley.uk/solutions/2014/05/14/how-to-solve-travis-ci-matplotlib-tclerror-no-display/    
 before_install:
-#  - "export DISPLAY=:99.0"
+  - "export DISPLAY=:99.0"
 #  - "sh -e /etc/init.d/xvfb start"
   - "rm -rf ~/.cache/matplotlib"
     
