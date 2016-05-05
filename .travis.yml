@@ -6,3 +6,13 @@ before_install:
     - pip install pytest pytest-cov
 script:
     - py.test
+    
+notifications: # set notification options
+  email:
+    recipients:
+      - one@example.com
+      - other@example.com
+
+    # change is when the repo status goes from pass to fail or vice versa
+    on_success: [always|never|change]
+    on_failure: [always|never|change]
