@@ -12,13 +12,12 @@ branches:
 
 # Adopt code from:  https://ryanvarley.uk/solutions/2014/05/14/how-to-solve-travis-ci-matplotlib-tclerror-no-display/    
 before_install:
-  - "rm -rf ~/.cache/matplotlib"
-    
+  - rm -rf ~/.cache/matplotlib
+  - curl -L https://raw.githubusercontent.com/krlmlr/texlive-squashfs/master/out/texlive.tar.xz | tar xJC ~
+   
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 install: 
-  - mkdir _build
-  - pdflatex -output-directory _build tex/your_file_1.tex
-  - pdflatex -output-directory _build tex/your_file_2.tex
+  - PATH=$HOME/texlive/bin/x86_64-linux:$PATH
   - pip install -r requirements.txt --use-mirrors
   - pip install -r test_requirements.txt --use-mirrors
 
