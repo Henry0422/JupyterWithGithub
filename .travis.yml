@@ -14,6 +14,7 @@ branches:
 before_install:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
+  - "rm -rf ~/.matplotlib/fontList.cache"
     
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 install: 
@@ -22,9 +23,9 @@ install:
 
 # Adopt code from:  https://github.com/rossant/ipycache/blob/master/.travis.yml
 script: 
+    - python ipynb_runner.py -v -s LearnPython.ipynb
     - nosetests learnMatplotlib.py
     - nosetests tex_demo.py
-    - python ipynb_runner.py -v -s LearnPython.ipynb
 
 
 notifications: # set notification options
