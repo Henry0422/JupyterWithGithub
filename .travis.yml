@@ -4,10 +4,13 @@ python:
     - "3.4"
 cache: 
     - pip
-before_install:
-    - pip install pytest pytest-cov
-script:
-    - pytest learnMatplotlib.py
+    
+# Whitelisting example
+branches:
+  only:
+    - master
+
+script: nosetests
 
 notifications: # set notification options
   email:

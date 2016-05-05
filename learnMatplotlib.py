@@ -7,7 +7,7 @@ Created on Mar 30, 2016
 import numpy as np
 import matplotlib.pyplot as plt
 
-class MyClass(object):
+class MyClass(object)??????:
     '''
     classdocs
     '''
