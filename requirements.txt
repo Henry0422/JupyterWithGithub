@@ -1,1 +1,1 @@
-# what are the requirements?
+ipython[all]
