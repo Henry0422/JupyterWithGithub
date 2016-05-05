@@ -17,7 +17,6 @@ before_install:
    
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 install: 
-  - PATH=$HOME/texlive/bin/x86_64-linux:$PATH
   - pip install -r requirements.txt --use-mirrors
   - pip install -r test_requirements.txt --use-mirrors
 
