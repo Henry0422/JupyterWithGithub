@@ -22,7 +22,7 @@ branches:
 
 # Adopt code from:  https://ryanvarley.uk/solutions/2014/05/14/how-to-solve-travis-ci-matplotlib-tclerror-no-display/    
 before_install:
-
+#  - rm -rf ~/.cache/matplotlib
    
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 install: 
@@ -31,7 +31,6 @@ install:
 
 # Adopt code from:  https://github.com/rossant/ipycache/blob/master/.travis.yml
 script: 
-	- rm -rf ~/.cache/matplotlib
     - python ipynb_runner.py -v -s LearnPython.ipynb
     - nosetests learnMatplotlib.py
     - nosetests tex_demo.py
