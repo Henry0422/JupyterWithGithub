@@ -12,11 +12,11 @@ branches:
     
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 install: 
-  - pip install -r requirements.txt --use-mirrors
   - pip install -r test_requirements.txt --use-mirrors
 
 script: 
     - nosetests learnMatplotlib.py
+    - nosetests tex_demo.py
     - python ipynb_runner.py -v -s LearnPython.ipynb
 
 
