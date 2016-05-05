@@ -19,11 +19,11 @@ class MyClass(object):
         '''
         
     a = np.arange(0,10,0.5)
-    print 'Array a is:  ', a
+    print ('Array a is:  ', a)
     print
     
     b=a**2
-    print 'Array b is:  ', b
+    print ('Array b is:  ', b)
     
     plt.ylabel('Squares')
     
