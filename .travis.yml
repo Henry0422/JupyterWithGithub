@@ -10,7 +10,7 @@ branches:
   only:
     - master
 
-script: nosetests
+script: nosetests learnMatplotlib.py
 
 notifications: # set notification options
   email:
