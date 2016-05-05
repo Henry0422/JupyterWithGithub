@@ -12,8 +12,8 @@ branches:
 
 # Adopt code from:  https://ryanvarley.uk/solutions/2014/05/14/how-to-solve-travis-ci-matplotlib-tclerror-no-display/    
 before_install:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
+#  - "export DISPLAY=:99.0"
+#  - "sh -e /etc/init.d/xvfb start"
   - "rm -rf ~/.cache/matplotlib"
     
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
@@ -25,10 +25,10 @@ install:
 script: 
     - python ipynb_runner.py -v -s LearnPython.ipynb
     - nosetests learnMatplotlib.py
-    - nosetests tex_demo.py
+    #- nosetests tex_demo.py
 
-
-notifications: # set notification options
+# set notification options
+notifications: 
   email:
     recipients:
       - roh919@mail.usask.ca
